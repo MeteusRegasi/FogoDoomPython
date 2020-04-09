@@ -11,17 +11,16 @@ tela = display.set_mode(tamanhoJanela)
 #Define o fps
 fps = clock()
 #Define o pixel
-pixel = (1, 1)
+pixel = 1
+#Tupla do pixel
+pixelArea = (pixel, pixel)
 
 #Define as posições do fogo
-matriz = criarMatriz(10, 10, 1)
+matriz = criarMatriz(10, 10, pixel)
 #Coloca um valor de 0 a 36 em cada valor
 fogo = criarFogo(matriz)
 
-fogo = fogoProp(fogo)
-print(fogo)
 
-"""
 #Loop
 while True:
     #Aplica o fps
@@ -29,4 +28,4 @@ while True:
     #Loop de eventos
     for eventos in event.get():
         if eventos.type == QUIT:
-            exit"""
+            exit

@@ -15,12 +15,20 @@ def criarFogo(matriz):
         else:
             fogo[pos] = 0
     return fogo
-def fogoProp(fogo):
+def fogoProp(fogo, pixel=1):
     fogor = fogo
-    for pos, fi in fogor.items:
-        try:
-            fogor[pos] = fogor[(pos[0], pos[1] - 1)] - randint(0, 5)
+    for pos, fi in fogor.items():
+        if fogor[pos] != 36:
+            fogor[pos] = fogor[pos[0], pos[1] + pixel] - randint(1, 5)
             if fogor[pos] < 0:
                 fogor[pos] = 0
-    print(fogor)
     return fogor
+"""
+def fogoProp(fogo, pixel=1):
+    fogor = fogo
+    for pos, fi in fogor.items():
+        try:
+            fogor[pos] = fogor[(pos[0], pos[1] - pixel)] - randint(0, 5)
+            if fogor[pos] < 0:
+                fogor[pos] = 0
+    return fogor"""
