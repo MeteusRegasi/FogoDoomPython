@@ -35,6 +35,6 @@ while True:
         tela.blit(pxl, [pos[0], pos[1]])
         pxl.fill(listaCores[cor])
     #Propagação do fogo
-    fogo = fogoProp(fogo)
+    fogo = fogoProp(fogo, pixel, 2)
     #Da Update de tela
     display.update()

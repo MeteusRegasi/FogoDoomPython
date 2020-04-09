@@ -16,10 +16,10 @@ def criarFogo(matriz):
             fogo[pos] = 0
     return fogo
 def fogoProp(fogo, pixel=1, prop=10):
-    fogor = fogo
-    for pos, fi in fogor.items():
-        if fogor[pos] != 36:
-            fogor[pos] = fogor[pos[0], pos[1] + pixel] - randint(1, prop)
-            if fogor[pos] < 0:
-                fogor[pos] = 0
-    return fogor
+    fogo
+    for pos, fi in fogo.items():
+        if fogo[pos] != 36:
+            fogo[pos] = fogo[pos[0], pos[1] + pixel] - randint(1, prop)
+            if fogo[pos] < 0:
+                fogo[pos] = 0
+    return fogo
