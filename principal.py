@@ -15,14 +15,15 @@ listaCores = [(7, 7, 7), (31, 7, 7), (47, 15, 7), (71, 15, 7), (87, 23, 7), (103
 #Define o fps
 fps = time.Clock()
 #Define o pixel e a área do pixel
-pixel = 5
+pixel = 10
 pixelArea = (pixel, pixel)
 
 #Define as posições do fogo
-matriz = criarMatriz(100, 100, pixel)
+matriz = criarMatriz(50, 50, pixel)
 #Coloca um valor de 0 a 36 em cada valor
 fogo = criarFogo(matriz)
 #Define o tamanho do pixel para cada espaço da matriz.
+fogo = fogoProp(fogo, pixel, 4)
 pxl = Surface(pixelArea)
 
 #Loop
