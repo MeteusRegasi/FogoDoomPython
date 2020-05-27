@@ -23,8 +23,8 @@ matriz = criarMatriz(50, 50, pixel)
 #Coloca um valor de 0 a 36 em cada valor
 fogo = criarFogo(matriz)
 #Define o tamanho do pixel para cada espaço da matriz.
-fogo = fogoProp(fogo, pixel, 4)
 pxl = Surface(pixelArea)
+
 
 #Loop
 while True:
@@ -34,7 +34,7 @@ while True:
     for eventos in event.get():
         if eventos.type == QUIT:
             exit()
-    #Pinta cada pixel com a determinada cor:
+    #Pinta cada pixel com a determinada cor:    
     for pos, cor in fogo.items():
         tela.blit(pxl, [pos[0], pos[1]])
         pxl.fill(listaCores[cor])
